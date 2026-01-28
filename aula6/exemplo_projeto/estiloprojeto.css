@@ -1,0 +1,43 @@
+#caixatopo a{
+
+    color: rgb(0,0,0);
+
+}
+
+#caixahome{
+
+    background-color: blanchedalmond;
+    text-align: center;
+    color: rgb(189, 148, 92);
+
+}
+#titulohome{
+    margin-top: 5%;
+    margin-bottom: 0%;
+    
+
+}
+
+
+#tituloinfo{
+    color: rgb(165, 129, 74);
+    margin-top: 5%;
+    margin-bottom: 0%;
+    text-align: center;
+
+}
+#caixainfo{
+
+    background-color: rgb(232, 184, 110);
+    text-align: center;
+    color: rgb(234, 200, 149);
+    
+
+}
+#caixafim{
+
+    height: 200%;
+    width: 100%;
+    background-color: rgb(241, 208, 177);
+}
+
