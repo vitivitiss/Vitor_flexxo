@@ -1,0 +1,58 @@
+#caixatopo a{
+
+    color:brown;
+
+}
+
+#caixahome{
+
+    background-color: whitesmoke;
+    text-align: center;
+    color: brown;
+
+}
+#titulohome{
+    margin-top: 5%;
+    margin-bottom: 15%;
+    
+
+}
+#caixainfo{
+
+    background-color: whitesmoke;
+    text-align: center;
+    color: black;
+    
+
+}
+
+#tituloinfo{
+    margin-top: 5%;
+    margin-bottom: 15%;
+
+}
+
+#caixafim{
+
+    height: 150px;
+    width: 100%;
+    background-color:antiquewhite;
+
+}
+#caixafim h5{
+    padding-top: 50px;
+}
+#caixacadastro{
+
+    background-color: whitesmoke;
+    
+    
+}
+#caixacadastro2{
+
+    color: black;
+    text-align: left;
+    
+}
+
+
