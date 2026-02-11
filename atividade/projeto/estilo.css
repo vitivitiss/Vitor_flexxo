@@ -1,0 +1,93 @@
+#caixatopo{
+
+    width: 100%; 
+
+}
+
+#caixatopo a{
+
+  background-color: greenyellow;
+   
+
+}
+
+#caixahome{
+
+
+    background-color:greenyellow;
+    text-align: center;
+    color: brown;
+
+}
+#titulohome{
+    margin-top: 5%;
+    margin-bottom: 15%;
+    
+
+}
+#caixasobre{
+
+    background-color: greenyellow;
+    text-align: center;
+    color: black;
+    
+
+}
+
+#titulosobre{
+    margin-top: 5%;
+    margin-bottom: 15%;
+
+}
+#caixacadrastoc{
+
+    background-color: greenyellow;
+    text-align: center;
+    color: black;
+    
+
+}
+
+#titulocadastroc{
+    margin-top: 5%;
+    margin-bottom: 15%;
+
+}
+
+#caixacadrastof{
+
+    background-color: greenyellow;
+    text-align: center;
+    color: black;
+    
+
+}
+
+#titulocadastrof{
+    margin-top: 5%;
+    margin-bottom: 15%;
+
+}
+#titulosobre{
+    margin-top: 5%;
+    margin-bottom: 15%;
+
+}
+#img{
+
+        width: 40%;
+        height: 40%;
+        margin-top: 0%;
+        margin-right: 10%;
+        margin-left: 27%;
+    }   
+#espacamento{
+    margin-top: 3%;
+    
+
+}
+#caixalogin{
+    background-color: greenyellow;
+    width: 100%;
+
+}

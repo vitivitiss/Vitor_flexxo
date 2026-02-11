@@ -38,6 +38,9 @@
                 <div class="nav-item">
                     <a class="nav-link" href="informacoes.php">informações</a>
                 </div>
+                 <div class="nav-item">
+                    <a class="nav-link" href="sair.php">sair</a>
+                </div>
                 </ul>
         
             </div>

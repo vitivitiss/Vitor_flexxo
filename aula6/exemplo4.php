@@ -23,8 +23,7 @@
     <ul class="nav justify-content-center">
       <li class="nav-item">
        <img src = "Jakesalad.webp" alt="imagem n exibida" id=img 
-    
-    </li>
+      </li>
 
 
         <ul class="nav justify-content-center">

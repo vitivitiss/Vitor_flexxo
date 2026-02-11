@@ -1,43 +1,77 @@
 #caixatopo a{
 
-    color: rgb(0,0,0);
+    color:brown;
+
+}
+#caixalogin{
+
+    background-color: whitesmoke;
+    text-align: center;
+    color: black;
+    
+
+}
+
+#espacamento{
+    margin-top: 3%;
+    
+
+}
+#caixalogin button{
+
+    width: 100%;
 
 }
 
 #caixahome{
 
-    background-color: blanchedalmond;
+    background-color: whitesmoke;
     text-align: center;
-    color: rgb(189, 148, 92);
+    color: brown;
 
 }
 #titulohome{
     margin-top: 5%;
-    margin-bottom: 0%;
+    margin-bottom: 15%;
     
-
-}
-
-
-#tituloinfo{
-    color: rgb(165, 129, 74);
-    margin-top: 5%;
-    margin-bottom: 0%;
-    text-align: center;
 
 }
 #caixainfo{
 
-    background-color: rgb(232, 184, 110);
+    background-color: whitesmoke;
     text-align: center;
-    color: rgb(234, 200, 149);
+    color: black;
     
 
 }
+
+#tituloinfo{
+    margin-top: 5%;
+    margin-bottom: 15%;
+
+}
+
 #caixafim{
 
-    height: 200%;
+    height: 150px;
     width: 100%;
-    background-color: rgb(241, 208, 177);
+    background-color:antiquewhite;
+
 }
+#caixafim h5{
+    padding-top: 50px;
+}
+#caixacadastro{
+
+    background-color: whitesmoke;
+    
+    
+}
+#caixacadastro2{
+
+    color: black;
+    text-align: left;
+    
+}
+
 
