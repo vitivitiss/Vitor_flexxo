@@ -1,12 +1,12 @@
 <?php
 
-    class Action_SQL{
+    class Action_SQL2{
 
         public function selecionar(){
 
             require "../Conexao/conexao.php";
 
-            $stmt = $pdo->prepare("SELECT * FROM livros");
+            $stmt = $pdo->prepare("SELECT * FROM car");
             $stmt->execute();
             
             $resultado = $stmt;
@@ -26,19 +26,19 @@
 
             if(isset($id) && trim($id) && $id != NULL){
  
-                $stmt = $pdo->prepare("SELECT * FROM livros WHERE id = :id");
+                $stmt = $pdo->prepare("SELECT * FROM car WHERE id = :id");
                 $stmt ->bindParam(":id", $id);
                 $stmt ->execute();
 
                 $resultado= $stmt;
 
                 if( $resultado != TRUE){
-                echo "<script> alert('Erro ao selecionar'); window.location.href='../View/home.php'; </script>"; 
+                echo "<script> alert('Erro ao selecionar'); window.location.href='../View/home2.php'; </script>"; 
              exit;
                 }
 
             }else{
-                 echo "<script> alert('ID não encontrado ou inválido'); window.location.href='../View/home.php'; </script>"; 
+                 echo "<script> alert('ID não encontrado ou inválido'); window.location.href='../View/home2.php'; </script>"; 
                     exit;
             }
             return $stmt;
@@ -48,19 +48,19 @@
 
         public function inserir(
         $nome,
-        $descricao,
-        $genero, 
-        $quant_folhas){
+        $marca,
+        $chassi, 
+        $rodas){
 
             require "../Conexao/conexao.php";
             $stmt = $pdo->prepare("INSERT INTO
-            livros (nome, descricao, genero, quant_folhas)
-            VALUES (:nome, :descricao, :genero, :quant_folhas)");
+            car (nome, marca, chassi, rodas)
+            VALUES (:nome, :marca, :chassi, :rodas)");
 
             $stmt->bindParam(":nome", $nome);
-            $stmt->bindParam(":descricao", $descricao);
-            $stmt->bindParam(":genero", $genero);
-            $stmt->bindParam(":quant_folhas", $quant_folhas);
+            $stmt->bindParam(":marca", $marca);
+            $stmt->bindParam(":chassi", $chassi);
+            $stmt->bindParam(":rodas", $rodas);
             $stmt->execute();
 
             $resultado = $stmt;
@@ -82,19 +82,19 @@
 
         public function editar($id,
         $nome,
-        $descricao, 
-        $genero, 
-        $quant_folhas){
+        $marca, 
+        $chassi, 
+        $rodas){
 
             require "../Conexao/conexao.php";
             if(isset($id) && trim($id) && $id != NULL){
                 
-                $stmt = $pdo->prepare("UPDATE livros SET nome= :nome, descricao= :descricao, genero = :genero, quant_folhas = :quant_folhas 
+                $stmt = $pdo->prepare("UPDATE car SET nome= :nome, marca= :marca, chassi = :chassi, rodas = :rodas 
                 WHERE id = :id");
                 $stmt-> bindParam(":nome", $nome);
-                $stmt-> bindParam(":descricao", $descricao);
-                $stmt-> bindParam(":genero", $genero);
-                $stmt-> bindParam(":quant_folhas", $quant_folhas);
+                $stmt-> bindParam(":marca", $marca);
+                $stmt-> bindParam(":chassi", $chassi);
+                $stmt-> bindParam(":rodas", $rodas);
                 $stmt-> bindParam(":id", $id);
                 $stmt->execute();
 
@@ -107,12 +107,12 @@
 
 
                 }else{
-                    echo "<script> alert('sucesso ao inserir'); window.location.href='../View/home.php'; </script>"; 
+                    echo "<script> alert('sucesso ao inserir'); window.location.href='../View/home2.php'; </script>"; 
                     exit;
                 }
 
             }else{
-                 echo "<script> alert('ID não encontrado ou inválido'); window.location.href='../View/home.php'; </script>"; 
+                 echo "<script> alert('ID não encontrado ou inválido'); window.location.href='../View/home2.php'; </script>"; 
                     exit;
             }
 
@@ -125,17 +125,17 @@
 
             if(isset($id) && trim($id) && $id != NULL){
 
-                $stmt = $pdo->prepare("DELETE FROM livros WHERE id = :id");
+                $stmt = $pdo->prepare("DELETE FROM car WHERE id = :id");
                 $stmt ->bindParam(":id", $id);
                 $stmt ->execute();
 
                 $resultado= $stmt;
 
                 if( $resultado != TRUE){
-                    echo "<script> alert('Erro ao excluir'); window.location.href='../View/home.php'; </script>"; 
+                    echo "<script> alert('Erro ao excluir'); window.location.href='../View/home2.php'; </script>"; 
                     exit;
                 }else{
-                    echo "<script> alert('Sucesso ao excluir'); window.location.href='../View/home.php'; </script>"; 
+                    echo "<script> alert('Sucesso ao excluir'); window.location.href='../View/home2.php'; </script>"; 
                     exit;
 
                 }
@@ -143,7 +143,7 @@
 
 
             }else{
-                echo "<script> alert('ID não encontrado ou inválido'); window.location.href='../View/home.php'; </script>"; 
+                echo "<script> alert('ID não encontrado ou inválido'); window.location.href='../View/home2.php'; </script>"; 
                 exit;
             }
 

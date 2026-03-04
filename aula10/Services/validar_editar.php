@@ -3,17 +3,17 @@
     require "../Model/Livros.php";
     require "../Controller/Action_SQL.php";
 
-    $novo_livro = new Livros;
-    $nova_insercao = new Action_SQL;
+    $atualizar_livro = new Livros;
+    $nova_atualizacao = new Action_SQL;
 
-    if(isset($_POST['enviar'])){
+    
 
+    if(isset($_POST['editar'])){
+    $id= $_POST['id'];
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
     $genero = $_POST['genero'];
     $quant_folhas = $_POST['quant_folhas'];
-
-    
 
     if(empty(trim($nome))){
 
@@ -34,20 +34,19 @@
     
     if(empty(trim($quant_folhas))){
 
+
+
         echo "<script> alert('Campo quantidades de folhas em branco'); window.location.href='../View/cadastrar.php'; </script>";
              exit;
         }
-        
     
 
     
 
-    $novo_livro->setNome($nome);
-    $novo_livro->setDescricao($descricao);
-    $novo_livro->setGenero($genero);
-    $novo_livro->setQuant_folhas($quant_folhas);
-
-   
+    $atualizar_livro ->setNome($nome);
+    $atualizar_livro ->setDescricao($descricao);
+    $atualizar_livro ->setGenero($genero);
+    $atualizar_livro ->setQuant_folhas($quant_folhas);
     }else {
 
          echo "<script> alert('Aperte no botão'); window.location.href='../View/home.php'; </script>";
@@ -60,22 +59,18 @@
    
     
 
-    if($novo_livro->getNome() !="" &&
-    $novo_livro->getDescricao() !="" &&
-    $novo_livro->getGenero() != "" &&
-    $novo_livro->getQuant_folhas());
+    if($atualizar_livro ->getNome() !="" &&
+    $atualizar_livro ->getDescricao() !="" &&
+    $atualizar_livro ->getGenero() != "" &&
+    $atualizar_livro ->getQuant_folhas());
 
 
-        $nova_insercao->inserir(
-
-            $novo_livro->getNome(),
-            $novo_livro->getDescricao(),
-            $novo_livro->getGenero(),
-            $novo_livro->getQuant_folhas()
+        $nova_atualizacao->editar(
+            $id,
+            $atualizar_livro->getNome(),
+            $atualizar_livro->getDescricao(),
+            $atualizar_livro->getGenero(),
+            $atualizar_livro->getQuant_folhas()
         );
 
-
-    
-
 ?>
-

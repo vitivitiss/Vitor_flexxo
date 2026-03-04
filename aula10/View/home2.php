@@ -1,9 +1,9 @@
 <?php
 
     require "../Conexao/conexao.php";
-    require "../Controller/Action_SQL.php";
+    require "../Controller/Action_SQL2.php";
 
-    $nova_selecao = new Action_SQL;
+    $nova_selecao = new Action_SQL2;
     $resultado = $nova_selecao->selecionar();
 
 
@@ -28,15 +28,15 @@
     require "../Includes/topo.php";
     ?>
 
-    <h1 style="margin-bottom: 3%; margin-top: 3%; text-align: center;">Livros Cadastrados</h1>
+    <h1 style="margin-bottom: 3%; margin-top: 3%; text-align: center;">Carros Cadastrados</h1>
     <table class="table table-dark table-striped">
     <thead>
         <tr>
         <th scope="col">ID</th>
         <th scope="col">Nome</th>
-        <th scope="col">Descrição</th>
-        <th scope="col">Genero</th>
-        <th scope="col">Quantidade de folhas</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Chassi</th>
+        <th scope="col">Rodas</th>
         <th scope="col">Ações</th>
        
         
@@ -47,11 +47,11 @@
         <tr>
             <td><?=   $row['id'] ?></td>   
             <td><?=   $row['nome'] ?></td>
-            <td><?=   $row['descricao'] ?></td>   
-            <td><?=   $row['genero'] ?></td>   
-            <td><?=   $row['quant_folhas'] ?></td>   
+            <td><?=   $row['marca'] ?></td>   
+            <td><?=   $row['chassi'] ?></td>   
+            <td><?=   $row['rodas'] ?></td>   
        
-            <td> <a class="btn btn-primary" href="editar.php?id=<?= $row['id'] ?>">EDITAR </a>    
+            <td> <a class="btn btn-primary" href="editar2.php?id=<?= $row['id'] ?>">EDITAR </a>    
             <a class="btn btn-danger" href="../Services/deletar.php? id=<?= $row['id'] ;?>" onclick="return confirm('Você tem certeza?')"> DELETAR </a></td>      
         </tr>
 
