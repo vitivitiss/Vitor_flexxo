@@ -4,13 +4,13 @@
     
 
     
-    class Action_SQL{
+    class Action_SQL_PEC{
 
-        public function selecionar(){
+        public function selecionar_PEC($PEC){
 
             $nova_conexao = new Conexao;
 
-            $stmt = $nova_conexao->conectar_banco()->prepare ("SELECT * FROM livros");
+            $stmt = $nova_conexao->conectar_banco()->prepare ("SELECT * FROM " . $PEC);
             $stmt->execute();
             
             $resultado = $stmt;

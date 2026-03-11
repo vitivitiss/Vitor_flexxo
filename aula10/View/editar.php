@@ -1,5 +1,16 @@
 <?php
 
+  session_start();
+  //Verifica se o usuario esta logado e o manda de volta para o arquivo de login caso não esteja
+  if($_SESSION['logado'] == FALSE){
+
+    echo "<script> alert('Por favor, faça o login'); window.location.href='../index.php'; </script>";
+
+  }
+
+?>
+<?php
+
     require "../Controller/Action_SQL.php";
 
     $id = $_GET['id'];
@@ -27,7 +38,7 @@
 
     <div class="container">
 
-        <form action="../Services/validar_editar2.php" method="post">
+        <form action="../Services/validar_editar.php" method="post">
 
             <input type="hidden"name="id" value="<?=htmlspecialchars($id)?>">
 
@@ -60,7 +71,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <button class="btn btn-warning" style="width: 100%; margin-top: 3%;" name="editar2">Editar</button>
+                        <button class="btn btn-warning" style="width: 100%; margin-top: 3%;" name="editar">Editar</button>
                     </div>
                 </div>
         </form>

@@ -1,21 +1,12 @@
-<?php
 
-  session_start();
-  //Verifica se o usuario esta logado e o manda de volta para o arquivo de login caso não esteja
-  if($_SESSION['logado'] == FALSE){
-
-    echo "<script> alert('Por favor, faça o login'); window.location.href='../index.php'; </script>";
-
-  }
-
-?>
 <?php
 
     
-    require "../Controller/Action_SQL.php";
+    require "../Controller/Action_SQL_PEC.php";
 
-    $nova_selecao = new Action_SQL;
-    $resultado = $nova_selecao->selecionar();
+    $nova_selecao = new Action_SQL_PEC;
+    $resultado = $nova_selecao->selecionar_PEC("estado");
+
 
 
 ?>
@@ -30,7 +21,7 @@
         <link rel="stylesheet" >
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <title>Aula 10</title>
+        <title>Estado</title>
     </head>
 
         <body>
@@ -40,18 +31,33 @@
     require "../Includes/topo.php";
     ?>
 
-    <h1 style="margin-bottom: 3%; margin-top: 3%; text-align: center;">Livros Cadastrados</h1>
+    <h1 style="margin-bottom: 3%; margin-top: 3%; text-align: center;">Estados Cadastradas</h1>
+
+
+    <form action="../Services/validar_PEC.php" method="post">
+        <div class="row" style="margin-bottom: 3%;">
+        <div class="col-md-3">
+            <div class="input-group">
+                <span class="input-group-text" style="background-color: cadetblue; color:aquamarine; " >Estado:</span>    
+                <input type="text" class="form-control" name="estado" placeholder="Informe o estado aqui">
+            </div>
+        </div>
+            <div class="col-md-2">
+                <button type="submit" name="cadastrar" class="btn btn-primary">
+                Cadastrar estado</button>
+            </div>
+        </div>
+    </form>
+
+
     <table class="table table-dark table-striped">
     <thead>
         <tr>
         <th scope="col">ID</th>
         <th scope="col">Nome</th>
-        <th scope="col">Descrição</th>
-        <th scope="col">Genero</th>
-        <th scope="col">Quantidade de folhas</th>
+
         <th scope="col">Ações</th>
-       
-        
+      
         </tr>
     </thead>
     <tbody>
@@ -59,9 +65,7 @@
         <tr>
             <td><?=   $row['id'] ?></td>   
             <td><?=   $row['nome'] ?></td>
-            <td><?=   $row['descricao'] ?></td>   
-            <td><?=   $row['genero'] ?></td>   
-            <td><?=   $row['quant_folhas'] ?></td>   
+              
        
             <td> <a class="btn btn-primary" href="editar.php?id=<?= $row['id'] ?>">EDITAR </a>    
             <a class="btn btn-danger" href="../Services/deletar.php? id=<?= $row['id'] ;?>" onclick="return confirm('Você tem certeza?')"> DELETAR </a></td>      
@@ -76,7 +80,7 @@
         
         ?>
     </div>
-            <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

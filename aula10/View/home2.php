@@ -52,7 +52,7 @@
             <td><?=   $row['rodas'] ?></td>   
        
             <td> <a class="btn btn-primary" href="editar2.php?id=<?= $row['id'] ?>">EDITAR </a>    
-            <a class="btn btn-danger" href="../Services/deletar.php? id=<?= $row['id'] ;?>" onclick="return confirm('Você tem certeza?')"> DELETAR </a></td>      
+            <a class="btn btn-danger" href="../Services/deletar2.php? id=<?= $row['id'] ;?>" onclick="return confirm('Você tem certeza?')"> DELETAR </a></td>      
         </tr>
 
         <?php endwhile; ?>

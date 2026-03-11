@@ -102,12 +102,12 @@
 
                 if(!$resultado){
 
-                    echo "<script> alert('sucesso ao inserir'); window.location.href='../View/editar.php'; </script>"; 
+                    echo "<script> alert('sucesso ao editar'); window.location.href='../View/editar2.php'; </script>"; 
                     exit;
 
 
                 }else{
-                    echo "<script> alert('sucesso ao inserir'); window.location.href='../View/home2.php'; </script>"; 
+                    echo "<script> alert('sucesso ao editar'); window.location.href='../View/home2.php'; </script>"; 
                     exit;
                 }
 

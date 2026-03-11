@@ -46,7 +46,7 @@
     $atualizar_carros ->setNome($nome);
     $atualizar_carros ->setMarca($marca);
     $atualizar_carros ->setChassi($chassi);
-    $atualizar_carros ->setrodas($Rodas);
+    $atualizar_carros ->setrodas($rodas);
     }else {
 
          echo "<script> alert('Aperte no botão'); window.location.href='../View/home.php'; </script>";
