@@ -15,11 +15,13 @@
                 
             
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Ver mais</a>
                     <ul class="dropdown-menu">
                         <div><a class="dropdown-item" href="../View/pais.php">Pais</a></div>
                         <div><a class="dropdown-item" href="../View/estado.php">Estado</a></div>
                         <div><a class="dropdown-item" href="../View/cidade.php">Cidade</a></div>
+                        <div><hr class="dropdown-divider"></div>
+                         <div><a class="dropdown-item" href="../View/regioes.php">Regiões</a></div>
                         <div><hr class="dropdown-divider"></div>
                         <div><a class="dropdown-item" href="../View/enviar_email.php">E-mail</a></div>
                     </ul>

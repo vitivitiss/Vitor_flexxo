@@ -1,14 +1,4 @@
-<?php
 
-  session_start();
-  //Verifica se o usuario esta logado e o manda de volta para o arquivo de login caso não esteja
-  if($_SESSION['logado'] == FALSE){
-
-    echo "<script> alert('Por favor, faça o login'); window.location.href='../index.php'; </script>";
-
-  }
-
-?>
 <?php
 
     require "../Controller/Action_SQL_PEC.php";
