@@ -58,13 +58,18 @@
 
             $nova_conexao = new Conexao;
             $stmt = $nova_conexao->conectar_banco()->prepare("INSERT INTO
-            info (filmes, descricao, status, pessoa)
-            VALUES (:filmes, :descricao, :status, :pessoa)");
+            info (filmes, descricao, status, pessoa, ano, classificacao, genero, diretor, sinopse)
+            VALUES (:filmes, :descricao, :status, :pessoa, :ano, :classificacao, :genero, :diretor, :sinopse)");
 
             $stmt->bindParam(":filmes", $filmes);
             $stmt->bindParam(":descricao", $descricao);
             $stmt->bindParam(":status", $status);
             $stmt->bindParam(":pessoa", $pessoa);
+            $stmt->bindParam(":ano", $ano);
+            $stmt->bindParam(":classificacao", $classificacao);
+            $stmt->bindParam(":genero", $genero);
+            $stmt->bindParam(":diretor", $diretor);
+            $stmt->bindParam(":sinopse", $sinopse);
             $stmt->execute();
 
             $resultado = $stmt;

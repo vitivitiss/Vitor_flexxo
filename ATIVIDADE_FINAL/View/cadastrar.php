@@ -30,26 +30,49 @@
      <form action="../Services/validar_cadastro.php"method="post">
         <div class="row">
             <div class="col-md-12">
-                <h1 style="text-align: center;">Cadastro</h1>
+                <h1 style="text-align: center;">Cadastro de novos filmes</h1>
             </div>
         </div>
         <div class="row" style="margin-bottom: 4%;"> 
             <div class="col-md-3">
-                <label for="exampleFormControlInput1" class="form-label">Nome do filme </label>
-                <input type="text" class="form-control" name="filmes" placeholder="Nome do filme">
+                <label for="exampleFormControlInput1" class="form-label">Título  </label>
+                <input type="text" class="form-control" name="filmes" placeholder="Título do filme">
             </div>    
-            
-            <div class="col-md-3">
-                <label for="exampleFormControlInput1" class="form-label">descrição do filme </label>
-                <input type="text" class="form-control" name="descricao" placeholder="Descrição do filme ">
+              <div class="col-md-3">
+                <label for="exampleFormControlInput1" class="form-label">Diretor</label>
+                <input type="text" class="form-control" name="diretor" placeholder="Diretor">
             </div> 
             <div class="col-md-3">
-                <label for="exampleFormControlInput1" class="form-label">Status do filme </label>
+                <label for="exampleFormControlInput1" class="form-label">Sinopse</label>
+                <input type="text" class="form-control" name="sinopse" placeholder="Sinopse">
+            </div> 
+            <div class="col-md-3">
+                <label for="exampleFormControlInput1" class="form-label">Status  </label>
                 <input type="text" class="form-control" name="status" placeholder="Status" >
+                
             </div> 
              <div class="col-md-3">
                 <label for="exampleFormControlInput1" class="form-label">Atual dono </label>
                 <input type="text" class="form-control" name="pessoa" placeholder="Atual dono">
+            </div> 
+            <div class="col-md-3">
+                <label for="exampleFormControlInput1" class="form-label">Ano </label>
+                <input type="number" class="form-control" name="ano" placeholder="Ano do filme" >
+            </div> 
+             <div class="col-md-3">
+                <label for="exampleFormControlInput1" class="form-label">Gênero </label>
+                <input type="text" class="form-control" name="genero" placeholder="Gênero">
+            </div> 
+            <div class="col-md-3">
+                <label for="exampleFormControlInput1" class="form-label">Classificação indicativa</label>
+                <input type="number" class="form-control" name="classificacao" placeholder="Classificação" >
+            </div> 
+           
+           
+             
+            <div class="col-md-12">
+                <label for="exampleFormControlInput1" class="form-label">descrição  </label>
+                <input type="text" class="form-control" name="descricao" placeholder="Descrição do filme ">
             </div> 
             
         </div>

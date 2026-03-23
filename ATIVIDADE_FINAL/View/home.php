@@ -40,7 +40,7 @@
     require "../Includes/topo.php";
     ?>
 
-    <h1 style="margin-bottom: 3%; margin-top: 3%; text-align: center;">Livros Cadastrados</h1>
+    <h1 style="margin-bottom: 3%; margin-top: 3%; text-align: center;">Filmes Cadastrados</h1>
     <table class="table table-dark table-striped">
     <thead>
         <tr>

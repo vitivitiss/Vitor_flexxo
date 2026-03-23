@@ -90,7 +90,7 @@
             <div style="margin-top: 3%;" class="row">
                 <div class="col-md-12">
                     <label>Senha</label>
-                    <input type="text" class="form-control" name="senha">
+                    <input type="password" class="form-control" name="senha">
                 </div>
             </div>
             <div style="margin-top: 3%;" class="row">
